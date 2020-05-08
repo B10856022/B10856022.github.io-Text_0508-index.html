@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>台灣牛點餐價格表</title>
+    <style>
+        h1,
+        h2 {
+            font-weight: bolder;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 36px;
+        }
+        
+        h2 {
+            font-size: 28px;
+        }
+        
+        table {
+            margin: auto;
+            border: 1px;
+        }
+        
+        #tableCaption {
+            border-style: dashed;
+            border-width: 1px;
+        }
+        
+        td {
+            padding: 10px;
+            border: 1px red;
+            border-style: dotted;
+            text-align: center;
+        }
+        
+        .content {
+            color: green;
+            font-family: Arial;
+            font-size: 18px;
+        }
+        
+        #tableTitle {
+            font-weight: bolder;
+            font-size: 18px;
+            color: purple;
+            text-align: center
+        }
+    </style>
+    <script>
+        document.write('<table>')
+        document.write('<caption id="tableTitle"><h1>台灣牛點餐價格表</h1></caption>')
+        document.write('<caption id="tableTitle"><h2>折扣內容：數量為3的倍數折50</h2></caption>')
+        var i, j, k, l, m, n;
+        document.write('<tr><td id="tableCaption"></td>');
+        for (i = 1; i <= 5; i++) {
+            document.write('<td id="tableCaption">套餐' + i + '<br>' + (i * 50) + '元</td>');
+        }
+        document.write('</tr>')
+
+
+
+        for (k = 1; k <= 7; k++) {
+            if (k % 3 == 0) {
+                document.write('<tr><td>' + k + '</td>');
+                for (j = 1; j <= 5; j++) {
+                    document.write('<td class="content">原價：' + 50 * k * j + '<br>折扣後：' + (50 * k * j - 50) + '</td>');
+                }
+                document.write('</tr>')
+            } else {
+                document.write('<tr><td>' + k + '</td>');
+                for (j = 1; j <= 5; j++) {
+                    document.write('<td class="content">' + 50 * k * j + '</td>');
+                }
+                document.write('</tr>')
+            }
+        }
+
+
+
+
+        document.write('</table>')
+    </script>
+</head>
+
+<body>
+    <caption class=></caption>
+</body>
+
+</html>
